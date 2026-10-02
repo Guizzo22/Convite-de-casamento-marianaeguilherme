@@ -10,9 +10,9 @@
 <meta name="theme-color" content="#faf7f2">
 <title>Mariana & Guilherme — 24.10.2026</title>
 <!-- Ícones (aba do navegador / celular) -->
-<link rel="icon" type="image/png" href="/fiveicon2.png">
-<link rel="shortcut icon" type="image/png" href="/fiveicon2.png">
-<link rel="apple-touch-icon" href="/fiveicon2.png">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <!-- Pré-visualização de link (WhatsApp, Instagram, Facebook, Telegram, iMessage) -->
 <meta property="og:type" content="website">
@@ -21,14 +21,16 @@
 <meta property="og:title" content="Mariana &amp; Guilherme — 24.10.2026">
 <meta property="og:description" content="Você está convidado para o nosso casamento. Confirme sua presença!">
 <meta property="og:url" content="https://convite-de-casamento-seven.vercel.app/">
-<meta property="og:image" content="https://convite-de-casamento-seven.vercel.app/fiveicon2.png?v=2">
-<meta property="og:image:secure_url" content="https://convite-de-casamento-seven.vercel.app/fiveicon2.png?v=2">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image" content="https://convite-de-casamento-seven.vercel.app/og-image.jpg?v=3">
+<meta property="og:image:secure_url" content="https://convite-de-casamento-seven.vercel.app/og-image.jpg?v=3">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logotipo do casal Mariana &amp; Guilherme">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mariana &amp; Guilherme — 24.10.2026">
 <meta name="twitter:description" content="Você está convidado para o nosso casamento. Confirme sua presença!">
-<meta name="twitter:image" content="https://convite-de-casamento-seven.vercel.app/fiveicon2.png?v=2">
+<meta name="twitter:image" content="https://convite-de-casamento-seven.vercel.app/og-image.jpg?v=3">
 <meta name="description" content="Você está convidado para o casamento de Mariana &amp; Guilherme — 24.10.2026.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -596,6 +598,20 @@ body { background: var(--creme); color: var(--texto); font-family: var(--font-sa
 </style>
 </head>
 <body>
+
+<!-- Atalho de link em destaque — fixo no topo, com botão de copiar -->
+<div id="link-atalho" style="position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px 16px;background:var(--verde);color:var(--creme);font-family:var(--font-sans);font-weight:400;font-size:14px;box-shadow:var(--shadow-sm);">
+  <span style="opacity:0.85;">💌 Convite de Mariana &amp; Guilherme:</span>
+  <strong id="link-atalho-url" style="color:var(--rose-light);letter-spacing:0.3px;">convite-de-casamento-seven.vercel.app</strong>
+  <button id="link-atalho-btn" onclick="
+    navigator.clipboard.writeText('https://convite-de-casamento-seven.vercel.app/').then(function(){
+      var b=document.getElementById('link-atalho-btn');
+      var t=b.innerText; b.innerText='Copiado ✓'; setTimeout(function(){ b.innerText=t; },2000);
+    });
+  " style="cursor:pointer;border:1px solid var(--rose-light);background:transparent;color:var(--creme);padding:6px 14px;border-radius:999px;font-family:var(--font-sans);font-size:13px;transition:var(--transition);">
+    Copiar link
+  </button>
+</div>
 
 <!-- TRILHA SONORA: só é liberada para tocar após o convidado entrar na Tela 2 -->
 <audio id="bg-music" src="atuaternura.mp3" loop preload="auto"></audio>
